@@ -1,0 +1,1 @@
+json.array! @professional_infos, partial: 'professional_infos/professional_info', as: :professional_info

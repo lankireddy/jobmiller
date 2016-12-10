@@ -1,0 +1,34 @@
+<%= form_for(jobseekar) do |f| %>
+  <% if jobseekar.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jobseekar.errors.count, "error") %> prohibited this jobseekar from being saved:</h2>
+
+      <ul>
+      <% jobseekar.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id,:value => current_user.id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dob %>
+    <%= f.date_select :dob %>
+  </div>
+
+  <div class="field">
+    <%= f.label :gender %>
+       <%= f.radio_button :gender, 'male', :checked => true %> Male
+    <%= f.radio_button :gender, 'female' %> Female
+    
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

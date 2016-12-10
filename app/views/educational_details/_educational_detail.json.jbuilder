@@ -1,0 +1,2 @@
+json.extract! educational_detail, :id, :user_id, :basic_qualification, :year_of_passing_BQ, :percentage_BQ, :university_BQ, :post_graduation, :percentage, :year_of_passing, :university, :created_at, :updated_at
+json.url educational_detail_url(educational_detail, format: :json)

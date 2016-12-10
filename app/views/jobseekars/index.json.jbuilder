@@ -1,0 +1,1 @@
+json.array! @jobseekars, partial: 'jobseekars/jobseekar', as: :jobseekar

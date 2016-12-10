@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @jobseekar.user_id %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @jobseekar.dob %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @jobseekar.gender %>
+</p>
+
+<%= link_to 'Edit', edit_jobseekar_path(@jobseekar) %> |
+<%= link_to 'Back', jobseekars_path %>

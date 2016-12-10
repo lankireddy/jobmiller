@@ -1,0 +1,2 @@
+json.extract! professional_info, :id, :user_id, :total_exp, :annual_salary, :functional_area, :company_name, :key_skills, :resume_title, :text_resume, :created_at, :updated_at
+json.url professional_info_url(professional_info, format: :json)

@@ -1,0 +1,1 @@
+json.partial! "professional_infos/professional_info", professional_info: @professional_info

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @professional_info.user_id %>
+</p>
+
+<p>
+  <strong>Total exp:</strong>
+  <%= @professional_info.total_exp %>
+</p>
+
+<p>
+  <strong>Annual salary:</strong>
+  <%= @professional_info.annual_salary %>
+</p>
+
+<p>
+  <strong>Functional area:</strong>
+  <%= @professional_info.functional_area %>
+</p>
+
+<p>
+  <strong>Company name:</strong>
+  <%= @professional_info.company_name %>
+</p>
+
+<p>
+  <strong>Key skills:</strong>
+  <%= @professional_info.key_skills %>
+</p>
+
+<p>
+  <strong>Resume title:</strong>
+  <%= @professional_info.resume_title %>
+</p>
+
+<p>
+  <strong>Text resume:</strong>
+  <%= @professional_info.text_resume %>
+</p>
+
+<%= link_to 'Edit', edit_professional_info_path(@professional_info) %> |
+<%= link_to 'Back', professional_infos_path %>

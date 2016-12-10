@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  doreg: 2016-12-06
+  ename: MyString
+  eno: 1
+  comapnyname: MyString
+  cost: 1
+
+two:
+  user_id: 1
+  doreg: 2016-12-06
+  ename: MyString
+  eno: 1
+  comapnyname: MyString
+  cost: 1

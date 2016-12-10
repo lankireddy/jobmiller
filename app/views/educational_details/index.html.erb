@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Educational Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Basic qualification</th>
+      <th>Year of passing bq</th>
+      <th>Percentage bq</th>
+      <th>University bq</th>
+      <th>Post graduation</th>
+      <th>Percentage</th>
+      <th>Year of passing</th>
+      <th>University</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @educational_details.each do |educational_detail| %>
+      <tr>
+        <td><%= educational_detail.user_id %></td>
+        <td><%= educational_detail.basic_qualification %></td>
+        <td><%= educational_detail.year_of_passing_BQ %></td>
+        <td><%= educational_detail.percentage_BQ %></td>
+        <td><%= educational_detail.university_BQ %></td>
+        <td><%= educational_detail.post_graduation %></td>
+        <td><%= educational_detail.percentage %></td>
+        <td><%= educational_detail.year_of_passing %></td>
+        <td><%= educational_detail.university %></td>
+        <td><%= link_to 'Show', educational_detail %></td>
+        <td><%= link_to 'Edit', edit_educational_detail_path(educational_detail) %></td>
+        <td><%= link_to 'Destroy', educational_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Educational Detail', new_educational_detail_path %>

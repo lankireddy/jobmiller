@@ -1,0 +1,57 @@
+<%= form_for(professional_info) do |f| %>
+  <% if professional_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(professional_info.errors.count, "error") %> prohibited this professional_info from being saved:</h2>
+
+      <ul>
+      <% professional_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id,:value => current_user.id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :total_exp %>
+    <%= f.text_field :total_exp %>
+  </div>
+
+  <div class="field">
+    <%= f.label :annual_salary %>
+    <%= f.text_field :annual_salary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :functional_area %>
+    <%= f.text_field :functional_area %>
+  </div>
+
+  <div class="field">
+    <%= f.label :company_name %>
+    <%= f.text_field :company_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :key_skills %>
+    <%= f.text_field :key_skills %>
+  </div>
+
+  <div class="field">
+    <%= f.label :resume_title %>
+    <%= f.text_field :resume_title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :text_resume %>
+    <%= f.text_area :text_resume %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

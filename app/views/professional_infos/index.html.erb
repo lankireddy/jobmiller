@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Professional Infos</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Total exp</th>
+      <th>Annual salary</th>
+      <th>Functional area</th>
+      <th>Company name</th>
+      <th>Key skills</th>
+      <th>Resume title</th>
+      <th>Text resume</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @professional_infos.each do |professional_info| %>
+      <tr>
+        <td><%= professional_info.user_id %></td>
+        <td><%= professional_info.total_exp %></td>
+        <td><%= professional_info.annual_salary %></td>
+        <td><%= professional_info.functional_area %></td>
+        <td><%= professional_info.company_name %></td>
+        <td><%= professional_info.key_skills %></td>
+        <td><%= professional_info.resume_title %></td>
+        <td><%= professional_info.text_resume %></td>
+        <td><%= link_to 'Show', professional_info %></td>
+        <td><%= link_to 'Edit', edit_professional_info_path(professional_info) %></td>
+        <td><%= link_to 'Destroy', professional_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Professional Info', new_professional_info_path %>
